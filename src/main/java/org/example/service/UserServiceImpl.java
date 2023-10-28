@@ -1,7 +1,6 @@
 package org.example.service;
 
 import org.example.model.User;
-import org.example.service.UserService;
 import org.example.util.Util;
 
 import java.sql.*;
