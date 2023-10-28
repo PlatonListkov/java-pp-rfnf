@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Util {
+    private static final String BD_DRIVER = "com.mysql.jdbc.Driver";
     private static final String BD_URL = "jdbc:mysql://localhost:3306/mydbtest";
     private static final String BD_USERNAME = "root";
     private static final String BD_PASSWORD = "root";
