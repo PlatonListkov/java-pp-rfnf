@@ -4,6 +4,10 @@ import org.example.dao.UserDao;
 import org.example.service.UserServiceImpl;
 
 public class Main {
+
+    /**
+     * Before running, you need to select the implementation of UserDaoJDBCImpl or UserDaoHibernateImpl in UserServiceImpl.
+     * */
     public static void main(String[] args) {
 
         UserDao userService = new UserServiceImpl();
