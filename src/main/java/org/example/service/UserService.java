@@ -1,10 +1,11 @@
 package org.example.service;
 
+import org.example.dao.UserDao;
 import org.example.model.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserService extends UserDao {
     void createUsersTable();
 
     void dropUsersTable();
