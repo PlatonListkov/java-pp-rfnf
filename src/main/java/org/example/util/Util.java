@@ -13,11 +13,11 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class Util {
-    private static final String BD_DRIVER = "com.mysql.jdbc.Driver";
+    private static final String BD_DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String BD_URL = "jdbc:mysql://localhost:3306/mydbtest";
     private static final String BD_USERNAME = "root";
     private static final String BD_PASSWORD = "root";
-    private static final String BD_DIALECT = "org.hibernate.dialect.MySQL5Dialect";
+    private static final String BD_DIALECT = "org.hibernate.dialect.MySQL5InnoDBDialect";
     private static SessionFactory sessionFactory;
 
     public static Connection getConnection() {
@@ -35,7 +35,6 @@ public class Util {
             try {
                 Configuration configuration = new Configuration();
 
-                // Hibernate settings equivalent to hibernate.cfg.xml's properties
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, BD_DRIVER);
                 settings.put(Environment.URL, BD_URL);
@@ -44,7 +43,7 @@ public class Util {
                 settings.put(Environment.DIALECT, BD_DIALECT);
                 settings.put(Environment.SHOW_SQL, "true");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-                settings.put(Environment.HBM2DDL_AUTO, "create-drop");
+                settings.put(Environment.HBM2DDL_AUTO, "none");
 
                 configuration.setProperties(settings);
 
