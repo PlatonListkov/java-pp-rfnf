@@ -823,11 +823,11 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     <collation id="220" parent="1" name="eucjpms_bin">
       <Charset>eucjpms</Charset>
     </collation>
-    <schema id="221" parent="1" name="information_schema">
+    <schema id="221" parent="1" name="mydbtest">
+      <Current>1</Current>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="222" parent="1" name="mydbtest">
-      <Current>1</Current>
+    <schema id="222" parent="1" name="information_schema">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="223" parent="1" name="mysql">
@@ -851,7 +851,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     <user id="229" parent="1" name="&apos;&apos;">
       <Host>localhost</Host>
     </user>
-    <table id="230" parent="222" name="users"/>
+    <table id="230" parent="221" name="users"/>
     <column id="231" parent="230" name="id">
       <AutoIncrement>1</AutoIncrement>
       <DasType>INT(10)|4s</DasType>
